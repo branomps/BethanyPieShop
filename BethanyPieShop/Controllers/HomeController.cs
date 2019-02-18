@@ -26,7 +26,7 @@ namespace BethanyPieShop.Controllers
                 Title = "Welcome to Bethany's Pie Shop",
                 Pies = pies.ToList()
             };
-            return View(pies);
+            return View(homeViewModel);
         }
     }
 }
