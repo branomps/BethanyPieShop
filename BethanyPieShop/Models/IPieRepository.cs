@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BethanyPieShop.Models
 {
-    interface IPieRepository
+    public interface IPieRepository
     {
         IEnumerable<Pie> GetAllPies();
 
