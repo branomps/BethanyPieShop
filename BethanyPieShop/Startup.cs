@@ -27,7 +27,7 @@ namespace BethanyPieShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IPieRepository, MockPieRepository>();
+            services.AddTransient<IPieRepository, PieRepository>();
             services.AddMvc();
         }
 
