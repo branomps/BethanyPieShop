@@ -37,10 +37,7 @@ namespace BethanyPieShop.UnitTests
         {
             MockPieRepository pieRepository = new MockPieRepository();
             var pies = pieRepository.GetAllPies().Count();
-            Assert.Equal(4,pies);
+            Assert.Equal(4, pies);
         }
-
-        
     }
 }
- 
