@@ -4,12 +4,21 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet"/>
-    <link href="css/site.css" rel="stylesheet"/>
+    <link href="~/css/site.css" rel="stylesheet"/>
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <div class="container">
+        <nav class="navbar fixed-top navbar-light bg-light">   
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                   <a asp-controller="Home" asp-action="Index" class="navbar-brand">Bethany's Pie Shop</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <div class="container body-content">
-      @RenderBody()
+        @RenderBody()
     </div>
 
     <script src="~/lib/jquery/jquery.js"></script>
