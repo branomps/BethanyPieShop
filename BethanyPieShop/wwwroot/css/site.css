@@ -13,3 +13,7 @@
 .form-box {
     background-color: azure;
 }
+
+.nav-item :hover {
+    background-color: burlywood;
+}

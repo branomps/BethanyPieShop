@@ -1,5 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
 
+@inject SignInManager<IdentityUser> SignInManager
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -21,6 +23,26 @@
             <li class="nav-item">
                 <a asp-controller="Feedback" asp-action="Index" class="nav-link">Feedback</a>
             </li>
+           
+            
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <form asp-area="" asp-controller="Account" asp-action="Logout" id="logoutForm"
+                      method="post" class="navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()" class="nav-link float-right">Log off</a></li>
+                    </ul>
+                </form>
+            }
+            else
+            {
+               <li class="nav-item">
+                    <a asp-controller="Account" asp-action="Register" class="nav-link float-right">Register</a>
+               </li>
+               <li class="nav-item">
+                    <a asp-controller="Account" asp-action="Login" class="nav-link float-right">Log in</a>
+               </li>
+            }
         </ul>
     </div>
 </nav>
